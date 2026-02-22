@@ -1,65 +1,155 @@
-# LaTeX Markdown Compiler README
+# LaTeX Markdown Compiler
 
-This is the README for your extension "markdown-pdf-with-latex". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+A powerful VS Code extension that compiles Markdown with LaTeX support into fully styled HTML and PDF documents using a modular template architecture and headless Chrome rendering.
 
 ---
 
-## Working with Markdown
+## 🚀 Overview
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+LaTeX Markdown Compiler transforms Markdown files into professionally styled documents with:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+- Full LaTeX math support (KaTeX)
+- Modular JSON-driven theme system
+- Syntax highlighting templates
+- Light / Dark system themes
+- High-quality PDF export via Puppeteer
+- Clean architecture for extensibility
 
-## For more information
+This extension is designed for both end users and developers who want customizable document rendering.
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+---
 
-**Enjoy!**
+## ✨ Features
+
+- ✅ Markdown to styled HTML rendering
+- ✅ Inline and block LaTeX math support
+- ✅ KaTeX-based math rendering
+- ✅ Modular template system (JSON → CSS → Full HTML)
+- ✅ Syntax theme support (VS Code Dark/Light, Tomorrow)
+- ✅ System theme switching
+- ✅ High-quality PDF export via headless Chrome
+- ✅ Clean extension architecture for contributors
+
+---
+
+## 🏗 Architecture
+
+Rendering Flow:
+Template JSON
+↓
+template-manager.js
+↓
+Generates CSS + Full HTML
+↓
+extension.js
+↓
+Puppeteer renders final document
+↓
+HTML / PDF output
+
+
+### Core Components
+
+**extension.js**
+- Registers VS Code commands
+- Coordinates document export
+- Launches Puppeteer for PDF rendering
+
+**template-manager.js**
+- Loads system, math, and syntax templates
+- Converts JSON theme definitions into CSS
+- Builds final HTML document structure
+
+**templates/**
+- `system/` → Light/Dark layout themes
+- `syntax/` → Code highlighting themes
+- `math/` → KaTeX adjustments and styling
+
+This modular architecture allows easy theme creation and extension.
+
+---
+
+## 📦 Requirements
+
+- VS Code
+- Google Chrome (for automated PDF export)
+- Node.js (for development)
+
+---
+
+## 🛠 Installation (Development)
+
+Clone the repository:
+git clone https://github.com/CYB3RN3T1C12/latex-markdown-compiler.git
+
+Install dependencies:
+npm install
+
+
+Run extension in development mode:
+
+- Open project in VS Code
+- Press `F5`
+- Launch Extension Development Host
+
+---
+
+## 📄 Usage
+
+1. Open a Markdown file
+2. Run the command to export:
+   LaTeX Markdown Compiler: Export PDF/HTML/PNG/JPEG
+3. Run the command to change the template:
+   LaTeX Markdown Compiler: Select Template
+---
+
+## 🎨 Custom Templates
+
+Themes are defined in JSON files located in:
+templates/
+
+You can create new themes by:
+
+- Duplicating a JSON template
+- Modifying color definitions
+- Adding new CSS rules via template-manager
+
+---
+
+## 🧪 Testing
+
+Run tests:
+npm test
+
+---
+
+## 🗺 Roadmap
+
+- Live preview webview editor
+- Template visual editor
+- Custom user template configuration
+- Marketplace publishing
+- Performance optimization
+- Plugin system for additional renderers
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+Please open an issue before major architectural changes.
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+Built with ❤️ for Markdown + LaTeX workflows.
