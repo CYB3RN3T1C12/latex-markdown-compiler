@@ -1,19 +1,38 @@
 {
     "name": "latex-markdown-compiler",
     "displayName": "LaTeX Markdown Compiler",
-    "description": "Compile Markdown files to PDF, HTML, PNG, and JPEG with full support for LaTeX math, using the same rendering engine as VS Code's Markdown Preview.",
+    "description": "Compile Markdown files to PDF, HTML, PNG, and JPEG with full support for LaTeX math using KaTeX and headless Chrome rendering.",
     "version": "0.0.1",
+    "publisher": "CYB3RN3T1C12",
+    "license": "MIT",
     "engines": {
-        "vscode": "^1.109.0"
+        "vscode": "^1.80.0"
     },
     "categories": [
         "Other"
     ],
-    "activationEvents": [
-        "onStartupFinished",
-        "onLanguage:markdown"
+    "keywords": [
+        "markdown",
+        "latex",
+        "katex",
+        "pdf",
+        "html",
+        "png",
+        "jpeg",
+        "math",
+        "export"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CYB3RN3T1C12/latex-markdown-compiler.git"
+    },
+    "bugs": {
+        "url": "https://github.com/CYB3RN3T1C12/latex-markdown-compiler/issues"
+    },
+    "homepage": "https://github.com/CYB3RN3T1C12/latex-markdown-compiler",
+
     "main": "./extension.js",
+
     "contributes": {
         "assets": [
             "media/latex.css"
@@ -97,11 +116,13 @@
             ]
         }
     },
+
     "scripts": {
         "lint": "eslint .",
         "pretest": "npm run lint",
         "test": "vscode-test"
     },
+
     "devDependencies": {
         "@types/mocha": "^10.0.10",
         "@types/node": "22.x",
@@ -110,6 +131,7 @@
         "@vscode/test-electron": "^2.5.2",
         "eslint": "^9.39.2"
     },
+
     "dependencies": {
         "puppeteer-core": "^24.37.3"
     }
