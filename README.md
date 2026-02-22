@@ -1,6 +1,6 @@
 # LaTeX Markdown Compiler
 
-A powerful VS Code extension that compiles Markdown with LaTeX support into fully styled HTML and PDF documents using a modular template architecture and headless Chrome rendering.
+A powerful VS Code extension that compiles Markdown with LaTeX support into fully styled HTML, PDF, PNG, and JPEG documents using a modular template architecture and headless Chrome rendering.
 
 ---
 
@@ -13,47 +13,51 @@ LaTeX Markdown Compiler transforms Markdown files into professionally styled doc
 - Syntax highlighting templates
 - Light / Dark system themes
 - High-quality PDF export via Puppeteer
+- Image export (PNG / JPEG)
 - Clean architecture for extensibility
 
-This extension is designed for both end users and developers who want customizable document rendering.
+Designed for both end users and developers who want customizable document rendering.
 
 ---
 
 ## ✨ Features
 
-- ✅ Markdown to styled HTML rendering
-- ✅ Inline and block LaTeX math support
-- ✅ KaTeX-based math rendering
-- ✅ Modular template system (JSON → CSS → Full HTML)
-- ✅ Syntax theme support (VS Code Dark/Light, Tomorrow)
-- ✅ System theme switching
-- ✅ High-quality PDF export via headless Chrome
-- ✅ Clean extension architecture for contributors
+- ✅ Markdown to styled HTML rendering  
+- ✅ Inline and block LaTeX math support  
+- ✅ KaTeX-based math rendering  
+- ✅ Modular template system (JSON → CSS → Full HTML)  
+- ✅ Syntax theme support (VS Code Dark/Light, Tomorrow)  
+- ✅ System theme switching  
+- ✅ Export to HTML, PDF, PNG, JPEG  
+- ✅ High-quality rendering via headless Chrome  
+- ✅ Clean architecture for contributors  
 
 ---
 
 ## 🏗 Architecture
 
-Rendering Flow:
-Template JSON
-↓
-template-manager.js
-↓
-Generates CSS + Full HTML
-↓
-extension.js
-↓
-Puppeteer renders final document
-↓
-HTML / PDF output
+### Rendering Flow
 
+```
+Template JSON
+      ↓
+template-manager.js
+      ↓
+Generates CSS + Full HTML
+      ↓
+extension.js
+      ↓
+Puppeteer (Headless Chrome)
+      ↓
+HTML / PDF / Image output
+```
 
 ### Core Components
 
 **extension.js**
 - Registers VS Code commands
 - Coordinates document export
-- Launches Puppeteer for PDF rendering
+- Launches Puppeteer for rendering
 
 **template-manager.js**
 - Loads system, math, and syntax templates
@@ -61,9 +65,9 @@ HTML / PDF output
 - Builds final HTML document structure
 
 **templates/**
-- `system/` → Light/Dark layout themes
+- `system/` → Layout themes (Light/Dark)
 - `syntax/` → Code highlighting themes
-- `math/` → KaTeX adjustments and styling
+- `math/` → KaTeX styling adjustments
 
 This modular architecture allows easy theme creation and extension.
 
@@ -72,19 +76,26 @@ This modular architecture allows easy theme creation and extension.
 ## 📦 Requirements
 
 - VS Code
-- Google Chrome (for automated PDF export)
+- Google Chrome (required for automated PDF and image export)
 - Node.js (for development)
+
+> Chrome must be installed locally for Puppeteer-based export to function.
 
 ---
 
 ## 🛠 Installation (Development)
 
 Clone the repository:
+
+```bash
 git clone https://github.com/CYB3RN3T1C12/latex-markdown-compiler.git
+```
 
 Install dependencies:
-npm install
 
+```bash
+npm install
+```
 
 Run extension in development mode:
 
@@ -96,41 +107,55 @@ Run extension in development mode:
 
 ## 📄 Usage
 
-1. Open a Markdown file
-2. Run the command to export:
-   LaTeX Markdown Compiler: Export PDF/HTML/PNG/JPEG
-3. Run the command to change the template:
-   LaTeX Markdown Compiler: Select Template
+1. Open a Markdown file  
+2. Run:
+
+```
+LaTeX Markdown Compiler: Export PDF/HTML/PNG/JPEG
+```
+
+3. To switch templates:
+
+```
+LaTeX Markdown Compiler: Select Template
+```
+
 ---
 
 ## 🎨 Custom Templates
 
-Themes are defined in JSON files located in:
+Themes are defined in:
+
+```
 templates/
+```
 
-You can create new themes by:
+To create a new theme:
 
-- Duplicating a JSON template
-- Modifying color definitions
-- Adding new CSS rules via template-manager
+- Duplicate a JSON template
+- Modify color definitions
+- Extend styling via `template-manager.js`
 
 ---
 
 ## 🧪 Testing
 
-Run tests:
+Run:
+
+```bash
 npm test
+```
 
 ---
 
 ## 🗺 Roadmap
 
-- Live preview webview editor
-- Template visual editor
-- Custom user template configuration
-- Marketplace publishing
-- Performance optimization
-- Plugin system for additional renderers
+- Live preview webview editor  
+- Template visual editor  
+- User-configurable templates  
+- Performance optimization  
+- Marketplace publishing automation  
+- Plugin system for additional renderers  
 
 ---
 
@@ -138,9 +163,9 @@ npm test
 
 Contributions are welcome.
 
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
+1. Fork the repository  
+2. Create a feature branch  
+3. Submit a pull request  
 
 Please open an issue before major architectural changes.
 
@@ -152,4 +177,4 @@ MIT License
 
 ---
 
-Built with ❤️ for Markdown + LaTeX workflows.
+Built for powerful Markdown + LaTeX workflows inside VS Code.
