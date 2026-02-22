@@ -1,0 +1,39 @@
+{
+  ".hljs-comment": "#6A9955",
+  ".hljs-quote": "#6A9955",
+
+  ".hljs-string": "#CE9178",
+  ".hljs-symbol": "#CE9178",
+  ".hljs-bullet": "#CE9178",
+
+  ".hljs-number": "#B5CEA8",
+  ".hljs-literal": "#B5CEA8",
+
+  ".hljs-keyword": "#569CD6",
+  ".hljs-selector-tag": "#569CD6",
+
+  ".hljs-title": "#DCDCAA",
+  ".hljs-section": "#DCDCAA",
+
+  ".hljs-variable": "#9CDCFE",
+  ".hljs-template-variable": "#9CDCFE",
+  ".hljs-attribute": "#9CDCFE",
+
+  ".hljs-type": "#4EC9B0",
+  ".hljs-built_in": "#4EC9B0",
+
+  ".hljs-tag": "#569CD6",
+  ".hljs-name": "#569CD6",
+
+  ".hljs-meta": "#9CDCFE",
+  ".hljs-link": "#569CD6",
+
+  ".hljs-deletion": "#F44747",
+  ".hljs-addition": "#587C0C",
+
+  ".hljs": {
+    "color": "#D4D4D4",
+    "background-color": "#1E1E1E",
+    "padding": "0.5em"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "name": "System Light",
+  "description": "Default light rendering template",
+
+  "typography": {
+    "body": {
+      "font": "Segoe UI, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "lineHeight": "1.6",
+      "letterSpacing": "0px",
+      "paragraphSpacingTop": "0.6em",
+      "paragraphSpacingBottom": "0.6em",
+      "color": "#222222"
+    },
+
+    "headers": {
+      "h1": {
+        "size": "2em",
+        "weight": "600",
+        "marginTop": "24px",
+        "paddingBottom": "6px",
+        "borderBottom": "1px solid #ddd",
+        "color": "#111111"
+      },
+      "h2": {
+        "size": "1.5em",
+        "weight": "600",
+        "marginTop": "20px",
+        "paddingBottom": "6px",
+        "borderBottom": "1px solid #eee",
+        "color": "#111111"
+      },
+      "h3": {
+        "size": "1.2em",
+        "weight": "600",
+        "marginTop": "18px",
+        "color": "#111111"
+      },
+      "h4": {
+        "size": "1em",
+        "weight": "600",
+        "marginTop": "16px",
+        "color": "#111111"
+      },
+      "h5": {
+        "size": "0.8em",
+        "weight": "600",
+        "marginTop": "14px",
+        "color": "#111111"
+      },
+      "h6": {
+        "size": "0.6em",
+        "weight": "600",
+        "marginTop": "12px",
+        "color": "#111111"
+      }
+    }
+  },
+
+  "lists": {
+    "indent": "24px",
+    "itemSpacing": "6px"
+  },
+
+  "tables": {
+    "headerBorder": "2px solid #dddddd",
+    "rowBorder": "1px solid #eeeeee",
+    "cellPadding": "8px"
+  },
+
+  "code": {
+    "background": "#f4f4f4",
+    "border": "1px solid #e0e0e0",
+    "radius": "6px",
+    "padding": "12px",
+    "inlineColor": "#d63384",
+    "syntaxTheme": "vscode-light"
+  },
+
+  "layout": {
+    "pageBackground": "#ffffff",
+    "marginTop": "0.5in",
+    "marginBottom": "0.5in",
+    "marginLeft": "0.5in",
+    "marginRight": "0.5in",
+    "headerHeight": "0.5in",
+    "footerHeight": "0.5in",
+    "horizontalRuleColor": "#dddddd",
+    "blockquoteBackground": "#f7f7f7",
+    "blockquoteBorder": "#cccccc"
+  }
+}

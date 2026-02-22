@@ -1,0 +1,7 @@
+.katex-mathml { display: none !important; }
+.katex-html { display: inline-block; }
+.katex .frac-line {
+  border-bottom: 1px solid black !important;
+  min-height: 1px !important;
+}
+

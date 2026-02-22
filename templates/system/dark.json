@@ -1,0 +1,93 @@
+{
+  "name": "System Dark",
+  "description": "Default dark rendering template",
+
+  "typography": {
+    "body": {
+      "font": "Segoe UI, sans-serif",
+      "size": "16px",
+      "weight": "400",
+      "lineHeight": "1.6",
+      "letterSpacing": "0px",
+      "paragraphSpacingTop": "0.6em",
+      "paragraphSpacingBottom": "0.6em",
+      "color": "#dddddd"
+    },
+
+    "headers": {
+      "h1": {
+        "size": "2em",
+        "weight": "600",
+        "marginTop": "24px",
+        "paddingBottom": "6px",
+        "borderBottom": "1px solid #333",
+        "color": "#ffffff"
+      },
+      "h2": {
+        "size": "1.5em",
+        "weight": "600",
+        "marginTop": "20px",
+        "paddingBottom": "6px",
+        "borderBottom": "1px solid #2a2a2a",
+        "color": "#ffffff"
+      },
+      "h3": {
+        "size": "1.2em",
+        "weight": "600",
+        "marginTop": "18px",
+        "color": "#ffffff"
+      },
+      "h4": {
+        "size": "1em",
+        "weight": "600",
+        "marginTop": "16px",
+        "color": "#ffffff"
+      },
+      "h5": {
+        "size": "0.8em",
+        "weight": "600",
+        "marginTop": "14px",
+        "color": "#ffffff"
+      },
+      "h6": {
+        "size": "0.6em",
+        "weight": "600",
+        "marginTop": "12px",
+        "color": "#ffffff"
+      }
+    }
+  },
+
+  "lists": {
+    "indent": "24px",
+    "itemSpacing": "6px"
+  },
+
+  "tables": {
+    "headerBorder": "2px solid #333",
+    "rowBorder": "1px solid #2a2a2a",
+    "cellPadding": "8px"
+  },
+
+  "code": {
+    "background": "#252526",
+    "border": "1px solid #333",
+    "radius": "6px",
+    "padding": "12px",
+    "inlineColor": "#ff7ab8",
+    "syntaxTheme": "vscode-dark"
+  },
+
+  "layout": {
+    "pageBackground": "#1e1e1e",
+    "marginTop": "0.5in",
+    "marginBottom": "0.5in",
+    "marginLeft": "0.5in",
+    "marginRight": "0.5in",
+    "headerHeight": "0.5in",
+    "footerHeight": "0.5in",
+    "horizontalRuleColor": "#333333",
+    "blockquoteBackground": "#2a2a2a",
+    "blockquoteBorder": "#444444"
+  }
+}

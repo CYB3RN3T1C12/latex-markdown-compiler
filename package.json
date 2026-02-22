@@ -1,0 +1,116 @@
+{
+    "name": "latex-markdown-compiler",
+    "displayName": "LaTeX Markdown Compiler",
+    "description": "Compile Markdown files to PDF, HTML, PNG, and JPEG with full support for LaTeX math, using the same rendering engine as VS Code's Markdown Preview.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.109.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished",
+        "onLanguage:markdown"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "assets": [
+            "media/latex.css"
+        ],
+        "commands": [
+            {
+                "command": "latex-markdown-compiler.exportPdf",
+                "title": "LaTeX Markdown Compiler: Export PDF"
+            },
+            {
+                "command": "latex-markdown-compiler.exportHtml",
+                "title": "LaTeX Markdown Compiler: Export HTML"
+            },
+            {
+                "command": "latex-markdown-compiler.exportPng",
+                "title": "LaTeX Markdown Compiler: Export PNG"
+            },
+            {
+                "command": "latex-markdown-compiler.exportJpeg",
+                "title": "LaTeX Markdown Compiler: Export JPEG"
+            },
+            {
+                "command": "latex-markdown-compiler.selectTemplate",
+                "title": "LaTeX Markdown Compiler: Select Template"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "latex-markdown-compiler.exportPdf",
+                    "group": "Markdown LaTeX @1",
+                    "when": "resourceExtname == .md"
+                },
+                {
+                    "command": "latex-markdown-compiler.exportHtml",
+                    "group": "Markdown LaTeX @2",
+                    "when": "resourceExtname == .md"
+                },
+                {
+                    "command": "latex-markdown-compiler.exportPng",
+                    "group": "Markdown LaTeX @3",
+                    "when": "resourceExtname == .md"
+                },
+                {
+                    "command": "latex-markdown-compiler.exportJpeg",
+                    "group": "Markdown LaTeX @4",
+                    "when": "resourceExtname == .md"
+                },
+                {
+                    "command": "latex-markdown-compiler.selectTemplate",
+                    "group": "Markdown LaTeX @5",
+                    "when": "resourceLangId == markdown"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "latex-markdown-compiler.exportPdf",
+                    "group": "Markdown LaTeX @1",
+                    "when": "editorLangId == markdown"
+                },
+                {
+                    "command": "latex-markdown-compiler.exportHtml",
+                    "group": "Markdown LaTeX @2",
+                    "when": "editorLangId == markdown"
+                },
+                {
+                    "command": "latex-markdown-compiler.exportPng",
+                    "group": "Markdown LaTeX @3",
+                    "when": "editorLangId == markdown"
+                },
+                {
+                    "command": "latex-markdown-compiler.exportJpeg",
+                    "group": "Markdown LaTeX @4",
+                    "when": "editorLangId == markdown"
+                },
+                {
+                    "command": "latex-markdown-compiler.selectTemplate",
+                    "group": "Markdown LaTeX @5",
+                    "when": "editorLangId == markdown"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node": "22.x",
+        "@types/vscode": "^1.109.0",
+        "@vscode/test-cli": "^0.0.12",
+        "@vscode/test-electron": "^2.5.2",
+        "eslint": "^9.39.2"
+    },
+    "dependencies": {
+        "puppeteer-core": "^24.37.3"
+    }
+}
