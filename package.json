@@ -32,14 +32,6 @@
         "math",
         "export"
     ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/CYB3RN3T1C12/latex-markdown-compiler.git"
-    },
-    "bugs": {
-        "url": "https://github.com/CYB3RN3T1C12/latex-markdown-compiler/issues"
-    },
-    "homepage": "https://github.com/CYB3RN3T1C12/latex-markdown-compiler",
 
     "main": "./extension.js",
 
