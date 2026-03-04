@@ -256,7 +256,7 @@ async function exportJpeg(html, targetUri) {
 
 async function runPuppeteer(html, targetUri, action, extension) {
     const puppeteer = require("puppeteer-core");
-    const chromePath = findChrome();
+    const chromePath = findChromeBrowser();
 
     if (!chromePath) {
         return showError("Chrome not found");
@@ -297,14 +297,22 @@ async function runPuppeteer(html, targetUri, action, extension) {
 // 7. Utilities
 // ------------------------------------------------------------
 
-function findChrome() {
+function findChromeBrowser() {
     const platform = process.platform;
 
     if (platform === "win32") {
         const possiblePaths = [
-            path.join(process.env.LOCALAPPDATA || "", "BraveSoftware", "Brave-Browser", "Application", "brave.exe"),
+            // Brave
             "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-            "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+
+            // Chrome
+            "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+
+            // Microsoft Edge (NEW)
+            "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+            "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe"
         ];
         return possiblePaths.find(fs.existsSync) || null;
     }

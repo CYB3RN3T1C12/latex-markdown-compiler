@@ -3,6 +3,7 @@
     "displayName": "LaTeX Markdown Compiler",
     "description": "Compile Markdown files to PDF, HTML, PNG, and JPEG with full support for LaTeX math using KaTeX and headless Chrome rendering.",
     "version": "0.0.1",
+    "icon": "media/icon.png",
     "publisher": "CYB3RN3T1C12",
     "repository": {
         "type": "git",
@@ -16,7 +17,7 @@
     "homepage": "https://github.com/CYB3RN3T1C12/latex-markdown-compiler",
     "license": "MIT",
     "engines": {
-        "vscode": "^1.85.0"
+        "vscode": "^1.109.0"
     },
     "categories": [
         "Other"
