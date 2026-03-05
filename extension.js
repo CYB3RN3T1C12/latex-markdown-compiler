@@ -305,7 +305,7 @@ function findChromeBrowser() {
             // Brave
             "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
             "C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-            "C:\\Users\\johnb\\AppData\\Local\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+            "C:\\Users\\johnb\\AppData\\Local\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
 
             // Chrome
             "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
